@@ -1,4 +1,4 @@
-import Animal from './../animal'
+import Animal from './animal'
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
