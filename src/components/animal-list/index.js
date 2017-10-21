@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
     },
 });
 
-
 const animals = [
     {
         id : 1,

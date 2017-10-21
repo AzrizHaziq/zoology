@@ -1,22 +1,16 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react'
+import { StackNavigator } from 'react-navigation'
 import AnimalList from './src/components/animal-list'
 
 export default class App extends Component {
-    render() {
-        return (
-            <View style={ styles.container }>
-                <AnimalList />
-            </View>
-        );
-    }
+
+    static navigationOptions = {
+        title : 'Welcome to Zoology'
+    };
+
+    render = () => <Zoology/>
 }
 
-const styles = StyleSheet.create({
-    container : {
-        flex : 1,
-        backgroundColor : '#fff',
-        alignItems : 'center',
-        justifyContent : 'center',
-    },
+const Zoology = StackNavigator({
+    AnimalList : { screen : AnimalList }
 });
