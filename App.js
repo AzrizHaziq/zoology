@@ -1,16 +1,20 @@
 import React, { Component } from 'react'
-import { StackNavigator } from 'react-navigation'
+import { DrawerNavigator } from 'react-navigation'
+import Testing from './src/components/testing'
 import AnimalList from './src/components/animal-list'
 
 export default class App extends Component {
-
-    static navigationOptions = {
-        title : 'Welcome to Zoology'
-    };
-
     render = () => <Zoology/>
 }
 
-const Zoology = StackNavigator({
-    AnimalList : { screen : AnimalList }
-});
+const Zoology = DrawerNavigator(
+    {
+        AnimalList : { screen : AnimalList },
+        Testing : { screen : Testing }
+    },
+    {
+        drawerWidth : 200,
+        drawerPosition : 'left',
+        drawerBackgroundColor : 'white'
+    }
+);

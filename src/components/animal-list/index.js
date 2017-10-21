@@ -1,14 +1,25 @@
 import Animal from './../animal'
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 export default class AnimalList extends Component {
+
+    static navigationOptions = {
+        title : 'Animal List'
+    };
+
     render() {
+
         return (
             <View style={ styles.container }>
                 { animals.map(animal =>
                     <Animal key={ animal.id } { ...animal } />
                 ) }
+
+                <TouchableOpacity onPress={ () => this.props.navigation.navigate('DrawerOpen') }>
+                    <Text>sadasdasdasdasdas</Text>
+                </TouchableOpacity>
+
             </View>
         );
     }
